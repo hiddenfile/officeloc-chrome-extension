@@ -51,7 +51,7 @@ function add_team(val){
 }
 
 function add_member(val,team){
-    return '</br><div class="row"><div class="span4 offset1"><input class ="member" name="'+team+'" type="text" placeholder="Member name" value = "'+val+'">&nbsp;&nbsp;<a class="btn btn-mini btn-danger remove-member" href="#"><i class="icon-remove"></i></a></div></div>'
+    return '</br><div class="row"><div class="span4 offset1"><input style="margin-left: 30px" class ="member" name="'+team+'" type="text" placeholder="Member name" value = "'+val+'">&nbsp;&nbsp;<a class="btn btn-mini btn-danger remove-member" href="#"><i class="icon-remove"></i></a></div></div>'
 }
 
 function flash_message(type,message){
