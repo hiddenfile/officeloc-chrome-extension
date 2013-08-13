@@ -28,6 +28,13 @@ function set_teams(data) {
     localStorage.teams = JSON.stringify(data);
     return true;
 }
+function set_json_teams(data) {
+    localStorage.teams = data;
+    return true;
+}
+function get_json_teams() {
+    return localStorage.teams;
+}
 
 function get_teams() {
     if (localStorage.teams) {
