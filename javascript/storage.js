@@ -37,11 +37,10 @@ function get_json_teams() {
 }
 
 function get_teams() {
-    if (localStorage.teams) {
+    try{
         return JSON.parse(localStorage.teams);
-    } else {
+    } catch(e) {
         return {};
     }
-
 }
 
