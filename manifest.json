@@ -9,7 +9,7 @@
     },
 
     "permissions": [
-        "http://office.loc/*","storage"
+        "http://office.loc/*", "storage"
     ],
 
     "browser_action": {

@@ -3,7 +3,7 @@ $(function(){
 
     $('.show_team').click(function(e){
         e.preventDefault();
-        chrome.tabs.executeScript(null, { code: 'show_members("'+$(this).html()+'")' });
+        chrome.tabs.executeScript(null, { code: 'show_members("'+ $(this).html()+'")' });
     });
 
     $('.refresh').click(function(e){

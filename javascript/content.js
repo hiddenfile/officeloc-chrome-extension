@@ -12,9 +12,9 @@ function show_members(team) {
             }
         });
         add_total_tr().show();
-        calculate_time($('.items tr td.total:nth-child(3n+3):visible'),1);
-        calculate_time($('.items tr td.total:nth-child(3n+2):visible'),0);
-        calculate_time($('.items tr td.total:nth-child(3n+1):visible'),2);
+        calculate_time($('.items tr td.total:nth-child(3n+3):visible'), 1);
+        calculate_time($('.items tr td.total:nth-child(3n+2):visible'), 0);
+        calculate_time($('.items tr td.total:nth-child(3n+1):visible'), 2);
     });
     return true
 };
@@ -24,7 +24,7 @@ function reloads() {
 
 function sum_time(times_array) {
     var sec = 0
-    $.each(times_array, function (i,v) {
+    $.each(times_array, function (i, v) {
         var parts = v.split(':');
         sec += (+parts[0]) * 60 * 60 + (+parts[1]) * 60;
     });
@@ -46,7 +46,7 @@ function sum_time(times_array) {
     return time;
 }
 
-function add_total_tr(){
+function add_total_tr() {
     $(".plugin-total").remove()
     var tr = $('.items tbody tr').last().clone();
     $(tr).find('td').html('')
@@ -57,22 +57,22 @@ function add_total_tr(){
     var local_timer = $($(tr).find('td.total')[0])
     var global_timer = $($(tr).find('td.total')[1])
     var total_timer = $($(tr).find('td.total')[2])
-    local_timer.css('color','white');
-    global_timer.css('color','white');
-    total_timer.css('color','white');
-    local_timer.css('background-color','red')
-    global_timer.css('background-color','green')
-    total_timer.css('background-color','blue')
+    local_timer.css('color', 'white');
+    global_timer.css('color', 'white');
+    total_timer.css('color', 'white');
+    local_timer.css('background-color', 'red')
+    global_timer.css('background-color', 'green')
+    total_timer.css('background-color', 'blue')
     $('.items tbody').append(tr)
     return tr
 }
 
-function calculate_time(objs,cell){
-    var times_array =[];
-    $.each(objs,function(i,v){
-        if (v.innerHTML == undefined || v.innerHTML == 0 || v.innerHTML == ''){
+function calculate_time(objs, cell) {
+    var times_array = [];
+    $.each(objs, function (i, v) {
+        if (v.innerHTML == undefined || v.innerHTML == 0 || v.innerHTML == '') {
             times_array.push('00:00')
-        }else{
+        } else {
             times_array.push(v.innerHTML)
         }
 

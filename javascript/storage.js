@@ -24,15 +24,15 @@ chrome.extension.onRequest.addListener(function (request, sender, sendResponse) 
 
 });
 
-function set_teams(data){
+function set_teams(data) {
     localStorage.teams = JSON.stringify(data);
     return true;
 }
 
-function get_teams(){
-    if(localStorage.teams){
+function get_teams() {
+    if (localStorage.teams) {
         return JSON.parse(localStorage.teams);
-    }else{
+    } else {
         return {};
     }
 
