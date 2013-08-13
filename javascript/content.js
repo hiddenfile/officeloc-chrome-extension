@@ -7,7 +7,7 @@ function show_members(team) {
 
         $('table.items tr').show()
         $('table.items tr.odd td:first-child').each(function (key, value) {
-            if (response.data.indexOf($(value).html()) < 0) {
+            if (response.data.indexOf($(value).text().trim()) < 0) {
                 $(value).parent('tr').first().hide()
             }
         });

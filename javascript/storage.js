@@ -26,10 +26,15 @@ chrome.extension.onRequest.addListener(function (request, sender, sendResponse) 
 
 function set_teams(data){
     localStorage.teams = JSON.stringify(data);
-    return true
+    return true;
 }
 
 function get_teams(){
-  return JSON.parse(localStorage.teams)
+    if(localStorage.teams){
+        return JSON.parse(localStorage.teams);
+    }else{
+        return {};
+    }
+
 }
 

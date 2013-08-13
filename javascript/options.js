@@ -5,10 +5,10 @@ $(function(){
         var hash = {}
         $.each($('.members-form').serializeArray(), function(index,value){
           if(hash[value['name']]){
-              hash[value['name']].push(value['value']);
+              hash[value['name']].push(value['value'].trim());
           }else{
               hash[value['name']] =[];
-              hash[value['name']].push(value['value']);
+              hash[value['name']].push(value['value'].trim());
           }
         });
         set_teams(hash)

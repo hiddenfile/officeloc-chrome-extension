@@ -21,7 +21,7 @@
     "content_scripts": [
         {
             "matches": ["http://office.loc/*"],
-            "js": ["javascript/jquery-2.0.3.min.js", "javascript/content.js"]
+            "js": ["libs/js/jquery-2.0.3.min.js", "javascript/content.js"]
         }
     ]
 }
