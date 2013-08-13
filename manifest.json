@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+
+    "name": "Office.loc Team",
+    "version": "1.0",
+
+    "icons": {
+        "48": "images/icon.png"
+    },
+
+    "permissions": [
+        "http://office.loc/*","storage"
+    ],
+
+    "browser_action": {
+        "default_title": "Team show",
+        "default_icon": "/images/icon.png",
+        "default_popup": "index.html"
+    },
+    "options_page": "options.html",
+    "content_scripts": [
+        {
+            "matches": ["http://office.loc/*"],
+            "js": ["javascript/jquery-2.0.3.min.js", "javascript/content.js"]
+        }
+    ]
+}
