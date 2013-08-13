@@ -47,11 +47,11 @@ $(function(){
     })
 });
 function add_team(val){
-    return '</br><div class="row '+val+'"><div class="span4"><input class ="team" data-name="'+val+'" type="text" placeholder="Team name" value = "'+val+'">&nbsp;&nbsp;<a class="btn btn-mini btn-success add-new-member" href="#"><i class="icon-plus"></i></a>&nbsp;&nbsp;<a class="btn btn-mini btn-danger remove-team" href="#"><i class="icon-remove"></i></a></div><div class="row members-div"></div>'
+    return '</br><div class="row"><div class="span4"><input class ="team" data-name="'+val+'" type="text" placeholder="Team name" value = "'+val+'">&nbsp;&nbsp;<a class="btn btn-mini btn-success add-new-member" href="#"><i class="icon-plus"></i></a>&nbsp;&nbsp;<a class="btn btn-mini btn-danger remove-team" href="#"><i class="icon-remove"></i></a></div><div class="row members-div"></div>'
 }
 
 function add_member(val,team){
-    return '</br><div class="row '+val+'"><div class="span4 offset1"><input class ="member" name="'+team+'" type="text" placeholder="Member name" value = "'+val+'">&nbsp;&nbsp;<a class="btn btn-mini btn-danger remove-member" href="#"><i class="icon-remove"></i></a></div></div>'
+    return '</br><div class="row"><div class="span4 offset1"><input class ="member" name="'+team+'" type="text" placeholder="Member name" value = "'+val+'">&nbsp;&nbsp;<a class="btn btn-mini btn-danger remove-member" href="#"><i class="icon-remove"></i></a></div></div>'
 }
 
 function flash_message(type,message){
